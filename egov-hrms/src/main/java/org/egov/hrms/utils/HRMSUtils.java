@@ -1,5 +1,6 @@
 package org.egov.hrms.utils;
 
+import java.security.SecureRandom;
 import java.util.List;
 import java.util.Random;
 
@@ -28,7 +29,7 @@ public class HRMSUtils {
 	 */
 	public String generatePassword(List<String> params) {
 		StringBuilder password = new StringBuilder();
-		Random random = new Random();
+		SecureRandom random = new SecureRandom();;
 		params.add(allowedPasswordSpecialCharacters);
 		try {
 			for(int i = 0; i < params.size(); i++) {
